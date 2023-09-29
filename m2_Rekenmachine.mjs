@@ -6,14 +6,56 @@ const userInput = readline.createInterface({input, output});
 let getal1 = parseFloat(await userInput.question('Wat is je eerste getal?'));
 let getal2 = parseFloat(await userInput.question('Wat is je tweede getal?'));
 
-let som = 0;
-let aftrekken = 0 ;
-let vermenigvuldigen = 0;
-let delen = 0;
+
+console.log('Kies een bewerking:');
+console.log('1. optellen');
+console.log('2. aftrekken');
+console.log('3. vermenigvuldigen');
+console.log('4. delen');
+
+let keuze = parseFloat(await userInput.question('Geef je keuze in: '));
+
+let resultaat, bewerking;
+
+switch (keuze) {
+    case 1:
+        resultaat = getal1 + getal2;
+        bewerking = '+';
+        break;
+    case 2:
+        resultaat = getal1 - getal2;
+        bewerking = '-';
+        break;
+    case 3:
+        resultaat = getal1 * getal2;
+        bewerking = '*';
+        break;
+    case 4:
+        if (getal2 == 0) {
+            console.log('Kan niet delen door nul.');
+            process.exit();
+        }
+        resultaat = getal1 / getal2;
+        bewerking = '/';
+        break;
+    default:
+        console.log(`Je koos voor "${keuze}" maar dit is geen geldige keuze.`);
+        process.exit();
+}
+
+console.log(`${getal1} ${bewerking} ${getal2} = ${resultaat}`);
+
+process.exit();
 
 
 
-console.log('Kies een bwerking:');
+/*
+let som;
+let aftrekken;
+let vermenigvuldigen;
+let delen;
+
+console.log('Kies een bewerking:');
 console.log('1. optellen');
 console.log('2. aftrekken');
 console.log('3. vermenigvuldigen');
@@ -45,5 +87,4 @@ switch (keuze){
     default: 
     console.log('Je koos voor "' + keuze + '" maar dit is geen keuze.');
 }
-
-process.exit();
+*/
