@@ -14,21 +14,20 @@ switch (maand) {
     case 'oktober':
     case 'december':
         dagen = 31 
-        console.log('De maand heeft in totaal ' + dagen + ' dagen.');
         break;
     case 'februari':
         dagen = 28
-        console.log('De maand heeft in totaal ' + dagen + ' dagen.');
         break;
     case 'april':
     case 'juni':
     case 'september':
     case 'november':
         dagen = 30
-        console.log('De maand heeft in totaal ' + dagen + ' dagen.')
         break;
     default:
-        console.log('Ik ken deze maand niet.')
+        console.log('Ik ken deze maand niet.');
+        process.exit();
 }
+console.log("De maand " + maand + ' heeft in totaal ' + dagen + ' dagen.');
 
 process.exit();
