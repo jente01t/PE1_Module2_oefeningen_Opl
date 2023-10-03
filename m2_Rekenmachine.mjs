@@ -43,7 +43,8 @@ switch (keuze) {
         process.exit();
 }
 
-console.log(`${getal1} ${bewerking} ${getal2} = ${resultaat}`);
+console.log(`${getal1} ${bewerking} ${getal2} = ${resultaat}`); // uotput kan weergegeven worden door ´´: hierdoor moet je geen '' voor elke spatie en functies worden geschreven door ${functie}
+//console.log(getal1 + ' ' + bewerking + ' ' + getal2 + ' = ' + resultaat);
 
 process.exit();
 
