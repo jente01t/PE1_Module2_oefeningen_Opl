@@ -7,12 +7,6 @@ let getal1 = parseFloat(await userInput.question('Wat is je eerste getal?'));
 let getal2 = parseFloat(await userInput.question('Wat is je tweede getal?'));
 
 
-console.log('Kies een bewerking:');
-console.log('1. optellen');
-console.log('2. aftrekken');
-console.log('3. vermenigvuldigen');
-console.log('4. delen');
-
 let keuze = parseFloat(await userInput.question('Geef je keuze in: '));
 
 let resultaat, bewerking;
